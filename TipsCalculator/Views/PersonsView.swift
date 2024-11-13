@@ -1,9 +1,9 @@
 import UIKit
 
 class PersonsView: UIView {
-    
+
 // MARK: UI elements
-    
+
     fileprivate let personsLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next", size: 20)
@@ -15,7 +15,7 @@ class PersonsView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     let personCountLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next Bold", size: 36)
@@ -34,7 +34,7 @@ class PersonsView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+
     let personIncreaseButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +49,7 @@ class PersonsView: UIView {
         button.backgroundColor = #colorLiteral(red: 0.4951053858, green: 0.9051901698, blue: 1, alpha: 0.926919495)
         return button
     }()
-    
+
     let personDecreaseButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -64,7 +64,7 @@ class PersonsView: UIView {
         button.backgroundColor = #colorLiteral(red: 0.4941176471, green: 0.9051901698, blue: 1, alpha: 0.7538803808)
         return button
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setView()
@@ -75,7 +75,7 @@ class PersonsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+
     // MARK: Set Views and Constraints
     
     fileprivate func setView() {

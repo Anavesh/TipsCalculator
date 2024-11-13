@@ -1,7 +1,7 @@
 import UIKit
 
 class TotalBillView: UIView {
-    
+
 // MARK: UI elements
     fileprivate let totalBillLabel: UILabel = {
         let label = UILabel()
@@ -13,7 +13,7 @@ class TotalBillView: UIView {
         label.textAlignment = .left
         return label
     }()
-    
+
     let totaBillTextField: UITextField = {
         let textField = UITextField()
         textField.font = UIFont(name: "Avenir Next Bold", size: 36)
@@ -32,11 +32,11 @@ class TotalBillView: UIView {
         setView()
         setConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: Set Views and Constraints
     private func setView() {
         [totalBillLabel, totaBillTextField].forEach {$0.translatesAutoresizingMaskIntoConstraints = false; self.addSubview($0)}

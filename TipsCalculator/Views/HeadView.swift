@@ -1,7 +1,7 @@
 import UIKit
 
 class HeadView: UIView {
-    
+
     fileprivate let headingLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

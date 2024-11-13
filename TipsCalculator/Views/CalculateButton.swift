@@ -3,7 +3,7 @@ import UIKit
 class CalculateButtonView: UIView {
 
 // MARK: Variables
-    
+
     let calculateButton: UIButton = {
     let button = UIButton(type: .system)
     button.translatesAutoresizingMaskIntoConstraints = false
@@ -19,17 +19,17 @@ class CalculateButtonView: UIView {
     button.layer.cornerRadius = 20
     return button
 }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setView()
         setConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
 // MARK: UI setup
     
     fileprivate func setView() {
