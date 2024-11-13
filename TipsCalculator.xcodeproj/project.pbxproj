@@ -135,7 +135,7 @@
 				A545EBE82C613061006BC982 /* Sources */,
 				A545EBE92C613061006BC982 /* Frameworks */,
 				A545EBEA2C613061006BC982 /* Resources */,
-				A551F8ED2CE511370061A96F /* ShellScript */,
+				A5A8062D2CE52195000AD95F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -192,7 +192,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A551F8ED2CE511370061A96F /* ShellScript */ = {
+		A5A8062D2CE52195000AD95F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,8 +207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "if command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
