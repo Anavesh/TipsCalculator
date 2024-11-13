@@ -1,7 +1,7 @@
 import UIKit
 
 class TipsView: UIView {
-    
+
     // MARK: UI elements
 
     private let tipsLabel:UILabel = {
@@ -41,12 +41,12 @@ class TipsView: UIView {
 
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            
+
             // Tips label constraints
             tipsLabel.topAnchor.constraint(equalTo: topAnchor),
             tipsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
             tipsLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1),
-        
+
             // Tips collection constraints
             tipsCollection.topAnchor.constraint(equalTo: tipsLabel.bottomAnchor, constant: 4),
             tipsCollection.leadingAnchor.constraint(equalTo: leadingAnchor),

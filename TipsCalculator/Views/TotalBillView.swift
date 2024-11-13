@@ -47,7 +47,7 @@ class TotalBillView: UIView {
             totalBillLabel.topAnchor.constraint(equalTo: topAnchor),
             totalBillLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
             totalBillLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.19),
-            
+
             totaBillTextField.topAnchor.constraint(equalTo: totalBillLabel.bottomAnchor, constant: 4),
             totaBillTextField.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.7),
             totaBillTextField.leadingAnchor.constraint(equalTo: leadingAnchor),

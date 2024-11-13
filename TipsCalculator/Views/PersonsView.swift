@@ -26,7 +26,6 @@ class PersonsView: UIView {
         return label
     }()
 
-    
     fileprivate let lightBlueView: UIView = {
         let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0.5972653031, green: 0.9011378884, blue: 1, alpha: 1)
@@ -44,8 +43,8 @@ class PersonsView: UIView {
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.titleLabel?.minimumScaleFactor = 0.5
         button.setTitleColor(.black, for: .normal)
-        button.layer.borderColor = .init(gray: 20, alpha: 0.5) // задает цвет границы
-        button.layer.borderWidth = 1.5 // задает ширину границы кнопки
+        button.layer.borderColor = .init(gray: 20, alpha: 0.5)
+        button.layer.borderWidth = 1.5
         button.backgroundColor = #colorLiteral(red: 0.4951053858, green: 0.9051901698, blue: 1, alpha: 0.926919495)
         return button
     }()
@@ -70,11 +69,10 @@ class PersonsView: UIView {
         setView()
         setConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 
     // MARK: Set Views and Constraints
     
@@ -88,22 +86,22 @@ class PersonsView: UIView {
             personsLabel.topAnchor.constraint(equalTo: topAnchor, constant: 4),
             personsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
             personsLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.19),
-            
+
             lightBlueView.topAnchor.constraint(equalTo: personsLabel.bottomAnchor, constant: 4),
             lightBlueView.leadingAnchor.constraint(equalTo: leadingAnchor),
             lightBlueView.trailingAnchor.constraint(equalTo: trailingAnchor),
             lightBlueView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.7),
-            
+
             personIncreaseButton.topAnchor.constraint(equalTo: lightBlueView.topAnchor),
             personIncreaseButton.heightAnchor.constraint(equalTo: lightBlueView.heightAnchor),
             personIncreaseButton.widthAnchor.constraint(equalTo: lightBlueView.widthAnchor, multiplier: 0.2),
             personIncreaseButton.trailingAnchor.constraint(equalTo: lightBlueView.trailingAnchor),
-        
+
             personDecreaseButton.topAnchor.constraint(equalTo: lightBlueView.topAnchor),
             personDecreaseButton.heightAnchor.constraint(equalTo: lightBlueView.heightAnchor),
             personDecreaseButton.widthAnchor.constraint(equalTo: lightBlueView.widthAnchor, multiplier: 0.2),
             personDecreaseButton.leadingAnchor.constraint(equalTo: lightBlueView.leadingAnchor),
-            
+
             personCountLabel.centerXAnchor.constraint(equalTo: lightBlueView.centerXAnchor),
             personCountLabel.centerYAnchor.constraint(equalTo: lightBlueView.centerYAnchor),
         ])
