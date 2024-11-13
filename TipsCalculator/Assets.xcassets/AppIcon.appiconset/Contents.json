@@ -1,0 +1,14 @@
+{
+  "images" : [
+    {
+      "filename" : "illustration-of-an-adorable-pig-clasping-a-hefty-sack-overflowing-with-gold-coins-detailed-fur-text.jpeg",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
