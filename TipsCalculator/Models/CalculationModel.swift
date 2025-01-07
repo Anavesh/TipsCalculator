@@ -7,6 +7,4 @@
 
 import Foundation
 
-struct CalculationModel {
-
-}
+struct CalculationModel {}

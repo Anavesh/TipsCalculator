@@ -1,10 +1,9 @@
 import UIKit
 
-class TipsView: UIView {
-
+final class TipsView: UIView {
     // MARK: UI elements
 
-    private let tipsLabel:UILabel = {
+    private let tipsLabel: UILabel = {
         let label = UILabel()
         label.text = "Tips"
         label.textColor = .black
@@ -28,20 +27,20 @@ class TipsView: UIView {
         setConstraints()
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: Set View and Constraints
 
-    private  func setView() {
-        [tipsLabel, tipsCollection].forEach {$0.translatesAutoresizingMaskIntoConstraints = false; self.addSubview($0)}
+    private func setView() {
+        [tipsLabel, tipsCollection].forEach { $0.translatesAutoresizingMaskIntoConstraints = false; self.addSubview($0) }
         tipsCollection.register(TipsViewCollectionCell.self, forCellWithReuseIdentifier: TipsViewCollectionCell.identifier)
     }
 
     private func setConstraints() {
         NSLayoutConstraint.activate([
-
             // Tips label constraints
             tipsLabel.topAnchor.constraint(equalTo: topAnchor),
             tipsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
@@ -52,8 +51,7 @@ class TipsView: UIView {
             tipsCollection.leadingAnchor.constraint(equalTo: leadingAnchor),
             tipsCollection.trailingAnchor.constraint(equalTo: trailingAnchor),
             tipsCollection.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.6),
-            tipsCollection.widthAnchor.constraint(equalTo: widthAnchor)
+            tipsCollection.widthAnchor.constraint(equalTo: widthAnchor),
         ])
     }
 }
-

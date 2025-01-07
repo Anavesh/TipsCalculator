@@ -1,7 +1,6 @@
 import UIKit
 
-class HeadView: UIView {
-
+final class HeadView: UIView {
     fileprivate let headingLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -43,14 +42,15 @@ class HeadView: UIView {
         setConstraints()
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     fileprivate func setView() {
-        [headingLabel, logoImage, descriptionLabel].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false;
-            self.addSubview($0)
+        for item in [headingLabel, logoImage, descriptionLabel] {
+            item.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(item)
         }
     }
 
@@ -71,7 +71,7 @@ class HeadView: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
             descriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3)
+            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3),
         ])
     }
 }

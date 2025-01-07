@@ -1,12 +1,12 @@
 import UIKit
 
-class TipsViewCollectionCell: UICollectionViewCell {
-
+final class TipsViewCollectionCell: UICollectionViewCell {
     // MARK: Variables and Constants
 
     static let identifier = "TipsCell"
 
     // MARK: UI elements
+
     let tipsAmountLabel: UILabel = {
         let button = UILabel()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -25,9 +25,11 @@ class TipsViewCollectionCell: UICollectionViewCell {
         setConstraints()
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     // MARK: Set Views and Constraints
 
     private func setView() {
@@ -40,15 +42,20 @@ class TipsViewCollectionCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             tipsAmountLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             tipsAmountLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            tipsAmountLabel.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 3),
-            tipsAmountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3)
+            tipsAmountLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 3),
+            tipsAmountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3),
         ])
     }
 
     // MARK: Cell configuration
 
     public func configureCell() {
-        layer.borderWidth = isSelected ? 3 : 0
-        layer.borderColor = isSelected ? UIColor.white.cgColor : nil
+        if isSelected {
+            layer.borderWidth = 3
+            layer.borderColor = UIColor.white.cgColor
+        } else {
+            layer.borderWidth = 0
+            layer.borderColor = nil
+        }
     }
 }

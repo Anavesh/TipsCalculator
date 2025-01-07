@@ -1,8 +1,8 @@
 import UIKit
 
-class TotalBillView: UIView {
+final class TotalBillView: UIView {
+    // MARK: UI elements
 
-// MARK: UI elements
     fileprivate let totalBillLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next", size: 20)
@@ -33,13 +33,15 @@ class TotalBillView: UIView {
         setConstraints()
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: Set Views and Constraints
+
     private func setView() {
-        [totalBillLabel, totaBillTextField].forEach {$0.translatesAutoresizingMaskIntoConstraints = false; self.addSubview($0)}
+        [totalBillLabel, totaBillTextField].forEach { $0.translatesAutoresizingMaskIntoConstraints = false; self.addSubview($0) }
     }
 
     private func setConstraints() {
@@ -51,7 +53,7 @@ class TotalBillView: UIView {
             totaBillTextField.topAnchor.constraint(equalTo: totalBillLabel.bottomAnchor, constant: 4),
             totaBillTextField.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.7),
             totaBillTextField.leadingAnchor.constraint(equalTo: leadingAnchor),
-            totaBillTextField.trailingAnchor.constraint(equalTo: trailingAnchor)
+            totaBillTextField.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
     }
 }

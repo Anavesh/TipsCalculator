@@ -10,13 +10,14 @@
 		A5115EE72CDBDA7C00C0E3E5 /* TipsViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5115EE62CDBDA7C00C0E3E5 /* TipsViewCollectionCell.swift */; };
 		A545EBF02C613061006BC982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EBEF2C613061006BC982 /* AppDelegate.swift */; };
 		A545EBF22C613061006BC982 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EBF12C613061006BC982 /* SceneDelegate.swift */; };
-		A545EBF42C613061006BC982 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EBF32C613061006BC982 /* MainViewController.swift */; };
+		A545EBF42C613061006BC982 /* TipsCalculationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EBF32C613061006BC982 /* TipsCalculationVC.swift */; };
 		A545EBF92C613062006BC982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A545EBF82C613062006BC982 /* Assets.xcassets */; };
 		A545EBFC2C613062006BC982 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A545EBFB2C613062006BC982 /* Base */; };
 		A545EC082C613295006BC982 /* HeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC072C613295006BC982 /* HeadView.swift */; };
 		A545EC0A2C6132CF006BC982 /* TotalBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC092C6132CF006BC982 /* TotalBillView.swift */; };
 		A545EC0C2C6132E4006BC982 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC0B2C6132E4006BC982 /* TipsView.swift */; };
 		A545EC0E2C613322006BC982 /* PersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC0D2C613322006BC982 /* PersonsView.swift */; };
+		A55555132D2DD78600F591AC /* TipsInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555122D2DD78600F591AC /* TipsInfoVC.swift */; };
 		A5E391942C7E05D400DEAC7D /* TipsCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E391932C7E05D400DEAC7D /* TipsCalculation.swift */; };
 		A5E391962C7E0C3900DEAC7D /* CalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E391952C7E0C3900DEAC7D /* CalculateButton.swift */; };
 /* End PBXBuildFile section */
@@ -26,7 +27,7 @@
 		A545EBEC2C613061006BC982 /* TipsCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipsCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A545EBEF2C613061006BC982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A545EBF12C613061006BC982 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A545EBF32C613061006BC982 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A545EBF32C613061006BC982 /* TipsCalculationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalculationVC.swift; sourceTree = "<group>"; };
 		A545EBF82C613062006BC982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A545EBFB2C613062006BC982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A545EBFD2C613063006BC982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		A545EC092C6132CF006BC982 /* TotalBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBillView.swift; sourceTree = "<group>"; };
 		A545EC0B2C6132E4006BC982 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		A545EC0D2C613322006BC982 /* PersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsView.swift; sourceTree = "<group>"; };
+		A55555122D2DD78600F591AC /* TipsInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsInfoVC.swift; sourceTree = "<group>"; };
 		A5E391932C7E05D400DEAC7D /* TipsCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalculation.swift; sourceTree = "<group>"; };
 		A5E391952C7E0C3900DEAC7D /* CalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				A5E391922C7E059200DEAC7D /* Model */,
-				A545EC062C61325C006BC982 /* Controller */,
+				A545EC062C61325C006BC982 /* Controllers */,
 				A545EC052C61322C006BC982 /* Application */,
 				A545EC042C613224006BC982 /* Cell */,
 				A545EC032C61321C006BC982 /* Views */,
@@ -109,12 +111,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		A545EC062C61325C006BC982 /* Controller */ = {
+		A545EC062C61325C006BC982 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A545EBF32C613061006BC982 /* MainViewController.swift */,
+				A545EBF32C613061006BC982 /* TipsCalculationVC.swift */,
+				A55555122D2DD78600F591AC /* TipsInfoVC.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A5E391922C7E059200DEAC7D /* Model */ = {
@@ -135,13 +138,14 @@
 				A545EBE82C613061006BC982 /* Sources */,
 				A545EBE92C613061006BC982 /* Frameworks */,
 				A545EBEA2C613061006BC982 /* Resources */,
-				A5A8062D2CE52195000AD95F /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TipsCalculator;
+			packageProductDependencies = (
+			);
 			productName = TipsCalcuator;
 			productReference = A545EBEC2C613061006BC982 /* TipsCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +174,8 @@
 				Base,
 			);
 			mainGroup = A545EBE32C613061006BC982;
+			packageReferences = (
+			);
 			productRefGroup = A545EBED2C613061006BC982 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,26 +197,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		A5A8062D2CE52195000AD95F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		A545EBE82C613061006BC982 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -218,13 +204,14 @@
 			files = (
 				A5E391942C7E05D400DEAC7D /* TipsCalculation.swift in Sources */,
 				A545EC0C2C6132E4006BC982 /* TipsView.swift in Sources */,
-				A545EBF42C613061006BC982 /* MainViewController.swift in Sources */,
+				A545EBF42C613061006BC982 /* TipsCalculationVC.swift in Sources */,
 				A545EC0A2C6132CF006BC982 /* TotalBillView.swift in Sources */,
 				A545EBF02C613061006BC982 /* AppDelegate.swift in Sources */,
 				A545EC082C613295006BC982 /* HeadView.swift in Sources */,
 				A545EC0E2C613322006BC982 /* PersonsView.swift in Sources */,
 				A5E391962C7E0C3900DEAC7D /* CalculateButton.swift in Sources */,
 				A5115EE72CDBDA7C00C0E3E5 /* TipsViewCollectionCell.swift in Sources */,
+				A55555132D2DD78600F591AC /* TipsInfoVC.swift in Sources */,
 				A545EBF22C613061006BC982 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,12 +356,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U58Z9A4JJF;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TipsCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,12 +383,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U58Z9A4JJF;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TipsCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

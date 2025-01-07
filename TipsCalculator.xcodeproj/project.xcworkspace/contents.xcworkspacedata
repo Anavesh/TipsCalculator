@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/naira/Desktop/MyProjects/TipsCalcuator/TipsCalculator.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

@@ -1,8 +1,7 @@
 import UIKit
 
-class PersonsView: UIView {
-
-// MARK: UI elements
+final class PersonsView: UIView {
+    // MARK: UI elements
 
     fileprivate let personsLabel: UILabel = {
         let label = UILabel()
@@ -70,15 +69,16 @@ class PersonsView: UIView {
         setConstraints()
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: Set Views and Constraints
-    
+
     fileprivate func setView() {
-        [personsLabel, lightBlueView].forEach {$0.translatesAutoresizingMaskIntoConstraints = false; self.addSubview($0)}
-        [personDecreaseButton, personIncreaseButton,personCountLabel].forEach {$0.translatesAutoresizingMaskIntoConstraints = false; lightBlueView.addSubview($0)}
+        [personsLabel, lightBlueView].forEach { $0.translatesAutoresizingMaskIntoConstraints = false; self.addSubview($0) }
+        [personDecreaseButton, personIncreaseButton, personCountLabel].forEach { $0.translatesAutoresizingMaskIntoConstraints = false; lightBlueView.addSubview($0) }
     }
 
     fileprivate func setConstraints() {
