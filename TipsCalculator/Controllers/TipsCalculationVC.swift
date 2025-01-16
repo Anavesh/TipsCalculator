@@ -4,29 +4,29 @@ final class TipsCalculationVC: UIViewController {
     
     // MARK: - Variables and Constants
     
-    private let tipsArray = ["10%", "15%", "20%", "25%"]
-    private var tips: Int = 0 {
+    private var tips: Double = 0 {
         didSet { tipsCalculationModel.tips = tips }
     }
-    private var personCount: Int = 1 {
+    private var personCount: Double = 1  {
         didSet {
             tipsCalculationModel.personCount = personCount
             personsView.personCountLabel.text = "\(personCount)"
         }
     }
-    private var totalBill: Int = 0 {
+    private var totalBill: Double = 0 {
         didSet {
             tipsCalculationModel.bill = totalBill
         }
     }
     
-    // MARK: - Views and Model
+    private var tipsArray: [String] {
+        return tipsCalculationModel.tipsArray
+    }
     
-    private let headView = HeadView()
-    private let totalBillView = TotalBillView()
-    private let personsView = PersonsView()
-    private let tipsView = TipsView()
-    private let calculateButtonView = CalculateButtonView()
+    // MARK: - Views and Model
+    private let (headView, totalBillView, personsView, tipsViewWithAction) = {
+        return (HeadView(), TotalBillView(), PersonsView(), TipsViewWithAction())
+    }()
     private var tipsCalculationModel = TipsCalculationModel()
     
     // MARK: - Lifecycle
@@ -34,53 +34,65 @@ final class TipsCalculationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        setupConstraints()
         setupActionsAndDelegates()
     }
     
     // MARK: - Setup Methods
     
     private func setupView() {
-        view.backgroundColor = .white
-        [headView, totalBillView, personsView, tipsView, calculateButtonView].forEach {
+        view.backgroundColor = .systemBackground
+        [headView,totalBillView,personsView,tipsViewWithAction].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
-    }
-    
-    private func setupConstraints() {
-        let safeArea = view.safeAreaLayoutGuide
-        let views = [headView, totalBillView, personsView, tipsView, calculateButtonView]
-        let multipliers: [CGFloat] = [0.34, 0.1, 0.1, 0.16, 0.08]
-        let constants: [CGFloat] = [8, 8, 8, 16, 20]
         
-        for (index, view) in views.enumerated() {
-            NSLayoutConstraint.activate([
-                view.topAnchor.constraint(equalTo: index == 0 ? safeArea.topAnchor : views[index - 1].bottomAnchor, constant: constants[index]),
-                view.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-                view.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.8),
-                view.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: multipliers[index])
-            ])
-        }
+        // Set constraints for each view
+        let isLargeDevice = UIScreen.main.bounds.width > 768
+        NSLayoutConstraint.activate([
+
+            // headView constraints
+            headView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: isLargeDevice ? 6 : 2),
+            headView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: isLargeDevice ? 24 : 12),
+            headView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: isLargeDevice ? -24 : -12),
+            headView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3),
+            
+            // totalBillView constraints
+            totalBillView.topAnchor.constraint(equalTo: headView.bottomAnchor, constant: isLargeDevice ? 12 : 2),
+            totalBillView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: isLargeDevice ? 32 : 12),
+            totalBillView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: isLargeDevice ? -16 : -12),
+            totalBillView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: isLargeDevice ? 0.12 : 0.12),
+            
+            // personsView constraints
+            personsView.topAnchor.constraint(equalTo: totalBillView.bottomAnchor, constant: isLargeDevice ? 12 : 16),
+            personsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: isLargeDevice ? 32 : 12),
+            personsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: isLargeDevice ? -16 : -12),
+            personsView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: isLargeDevice ? 0.12 : 0.12),
+            
+            // tipsViewWithAction constraints
+            tipsViewWithAction.topAnchor.constraint(equalTo: personsView.bottomAnchor, constant: isLargeDevice ? 12 : 4),
+            tipsViewWithAction.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: isLargeDevice ? 32 : 12),
+            tipsViewWithAction.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: isLargeDevice ? -16 : -12),
+            tipsViewWithAction.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: isLargeDevice ? 0.28 : 0.24)
+        ])
     }
     
     private func setupActionsAndDelegates() {
         setupButtonActions()
         setupCollectionView()
         createDismissKeyBoardTapGesture()
-        totalBillView.totaBillTextField.delegate = self
+        totalBillView.totalBillTextField.delegate = self
     }
     
     private func setupButtonActions() {
         personsView.personIncreaseButton.addTarget(self, action: #selector(increasePersonCount), for: .touchUpInside)
         personsView.personDecreaseButton.addTarget(self, action: #selector(decreasePersonCount), for: .touchUpInside)
-        calculateButtonView.calculateButton.addTarget(self, action: #selector(calculateButtonTapped), for: .touchUpInside)
+        tipsViewWithAction.calculateButton.addTarget(self, action: #selector(calculateButtonTapped), for: .touchUpInside)
     }
     
     private func setupCollectionView() {
-        tipsView.tipsCollection.delegate = self
-        tipsView.tipsCollection.dataSource = self
-        tipsView.tipsCollection.allowsSelection = true
+        tipsViewWithAction.tipsCollection.delegate = self
+        tipsViewWithAction.tipsCollection.dataSource = self
+        tipsViewWithAction.tipsCollection.allowsSelection = true
     }
     
     private func createDismissKeyBoardTapGesture() {
@@ -93,29 +105,20 @@ final class TipsCalculationVC: UIViewController {
         view.endEditing(true)
     }
 
-    
     // MARK: - Actions
     
     @objc private func increasePersonCount() {
         personCount += 1
-        print(personCount)
     }
     
     @objc private func decreasePersonCount() {
         guard personCount > 1 else { return }
         personCount -= 1
-        print(personCount)
     }
     
     @objc private func calculateButtonTapped() {
-        let result = String(tipsCalculationModel.calculateTips())
-        showAlert(title: "Tips per person", message: result)
-    }
-    
-    private func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
-        present(alertController, animated: true)
+        let result = tipsCalculationModel.calculateTips()
+        presentTCAlertOnMainThread(title: "Your tips", message: "\(result)/person")
     }
 }
 
@@ -126,17 +129,19 @@ extension TipsCalculationVC: UICollectionViewDelegate, UICollectionViewDataSourc
         return tipsArray.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TipsViewCollectionCell.identifier, for: indexPath) as? TipsViewCollectionCell else {
             fatalError("Unable to dequeue TipsViewCollectionCell")
         }
+        let tipsArray = tipsCalculationModel.tipsArray
         cell.tipsAmountLabel.text = tipsArray[indexPath.row]
         cell.configureCell()
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        tips = (indexPath.row + 1) * 5 + 5
+        tips = Double(tipsArray[indexPath.row]) ?? 0
         print(tips)
         guard let cell = collectionView.cellForItem(at: indexPath) as? TipsViewCollectionCell else { return }
         cell.isSelected = true
@@ -149,10 +154,11 @@ extension TipsCalculationVC: UICollectionViewDelegate, UICollectionViewDataSourc
         cell.configureCell()
     }
 
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width / 5
-        return CGSize(width: width, height: width * 0.8)
+        return CGSize(width: width, height: width * 0.7)
     }
 }
 
@@ -160,12 +166,22 @@ extension TipsCalculationVC: UICollectionViewDelegate, UICollectionViewDataSourc
 
 extension TipsCalculationVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("Текстовое поле закончилось редактирование")
-        guard let text = textField.text, !text.isEmpty, let bill = Int(text) else {
-            showAlert(title: "Error", message: "Invalid bill amount")
+        guard let text = textField.text, !text.isEmpty, let bill = Double(text) else {
+            presentTCAlertOnMainThread(title: "Error", message: "Invalid bill amount")
             totalBill = 0
             return
         }
         totalBill = bill
+    }
+}
+
+extension UIViewController {
+    func presentTCAlertOnMainThread(title: String, message: String) {
+        DispatchQueue.main.async {
+            let alertVC = TCAlertVC(title: title, message: message)
+            alertVC.modalPresentationStyle = .overFullScreen
+            alertVC.modalTransitionStyle = .crossDissolve
+            self.present(alertVC, animated: true)
+        }
     }
 }

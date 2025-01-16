@@ -15,11 +15,27 @@
 		A545EBFC2C613062006BC982 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A545EBFB2C613062006BC982 /* Base */; };
 		A545EC082C613295006BC982 /* HeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC072C613295006BC982 /* HeadView.swift */; };
 		A545EC0A2C6132CF006BC982 /* TotalBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC092C6132CF006BC982 /* TotalBillView.swift */; };
-		A545EC0C2C6132E4006BC982 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC0B2C6132E4006BC982 /* TipsView.swift */; };
+		A545EC0C2C6132E4006BC982 /* TipsViewWithAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC0B2C6132E4006BC982 /* TipsViewWithAction.swift */; };
 		A545EC0E2C613322006BC982 /* PersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545EC0D2C613322006BC982 /* PersonsView.swift */; };
-		A55555132D2DD78600F591AC /* TipsInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555122D2DD78600F591AC /* TipsInfoVC.swift */; };
+		A55555132D2DD78600F591AC /* CountryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555122D2DD78600F591AC /* CountryListVC.swift */; };
+		A55555162D2EE17500F591AC /* TipsData.json in Resources */ = {isa = PBXBuildFile; fileRef = A55555152D2EE17500F591AC /* TipsData.json */; };
+		A55555182D30312C00F591AC /* TipsInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555172D30312C00F591AC /* TipsInfoModel.swift */; };
+		A555551A2D303DA100F591AC /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555192D303DA100F591AC /* CountryTableViewCell.swift */; };
+		A555551C2D30658800F591AC /* TipsInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555551B2D30658800F591AC /* TipsInfoVC.swift */; };
+		A555551E2D314DBF00F591AC /* TipsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555551D2D314DBF00F591AC /* TipsInfoView.swift */; };
+		A55555212D314F1100F591AC /* TCLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555202D314F1100F591AC /* TCLabel.swift */; };
+		A55555252D31599400F591AC /* TCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555242D31599400F591AC /* TCButton.swift */; };
+		A55555362D35372000F591AC /* RobotoDynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555352D35372000F591AC /* RobotoDynamicType.swift */; };
+		A55555382D353BE200F591AC /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A55555372D353BE200F591AC /* Roboto-Black.ttf */; };
+		A555553B2D353C0E00F591AC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A55555392D353C0D00F591AC /* Roboto-Bold.ttf */; };
+		A555553C2D353C0E00F591AC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A555553A2D353C0D00F591AC /* Roboto-Light.ttf */; };
+		A55555402D353C2800F591AC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A555553D2D353C2800F591AC /* Roboto-Medium.ttf */; };
+		A55555412D353C2800F591AC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A555553E2D353C2800F591AC /* Roboto-Thin.ttf */; };
+		A55555422D353C2800F591AC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A555553F2D353C2800F591AC /* Roboto-Regular.ttf */; };
+		A55555462D36B75700F591AC /* TCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555452D36B75700F591AC /* TCAlertView.swift */; };
+		A55555482D36D70C00F591AC /* TCAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55555472D36D70C00F591AC /* TCAlertVC.swift */; };
+		A555554B2D38188D00F591AC /* TCImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555554A2D38188D00F591AC /* TCImageView.swift */; };
 		A5E391942C7E05D400DEAC7D /* TipsCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E391932C7E05D400DEAC7D /* TipsCalculation.swift */; };
-		A5E391962C7E0C3900DEAC7D /* CalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E391952C7E0C3900DEAC7D /* CalculateButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +49,27 @@
 		A545EBFD2C613063006BC982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A545EC072C613295006BC982 /* HeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadView.swift; sourceTree = "<group>"; };
 		A545EC092C6132CF006BC982 /* TotalBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBillView.swift; sourceTree = "<group>"; };
-		A545EC0B2C6132E4006BC982 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
+		A545EC0B2C6132E4006BC982 /* TipsViewWithAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewWithAction.swift; sourceTree = "<group>"; };
 		A545EC0D2C613322006BC982 /* PersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsView.swift; sourceTree = "<group>"; };
-		A55555122D2DD78600F591AC /* TipsInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsInfoVC.swift; sourceTree = "<group>"; };
+		A55555122D2DD78600F591AC /* CountryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVC.swift; sourceTree = "<group>"; };
+		A55555152D2EE17500F591AC /* TipsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TipsData.json; sourceTree = "<group>"; };
+		A55555172D30312C00F591AC /* TipsInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsInfoModel.swift; sourceTree = "<group>"; };
+		A55555192D303DA100F591AC /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		A555551B2D30658800F591AC /* TipsInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsInfoVC.swift; sourceTree = "<group>"; };
+		A555551D2D314DBF00F591AC /* TipsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsInfoView.swift; sourceTree = "<group>"; };
+		A55555202D314F1100F591AC /* TCLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCLabel.swift; sourceTree = "<group>"; };
+		A55555242D31599400F591AC /* TCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCButton.swift; sourceTree = "<group>"; };
+		A55555352D35372000F591AC /* RobotoDynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotoDynamicType.swift; sourceTree = "<group>"; };
+		A55555372D353BE200F591AC /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		A55555392D353C0D00F591AC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		A555553A2D353C0D00F591AC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		A555553D2D353C2800F591AC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		A555553E2D353C2800F591AC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../../Downloads/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		A555553F2D353C2800F591AC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		A55555452D36B75700F591AC /* TCAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAlertView.swift; sourceTree = "<group>"; };
+		A55555472D36D70C00F591AC /* TCAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAlertVC.swift; sourceTree = "<group>"; };
+		A555554A2D38188D00F591AC /* TCImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCImageView.swift; sourceTree = "<group>"; };
 		A5E391932C7E05D400DEAC7D /* TipsCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalculation.swift; sourceTree = "<group>"; };
-		A5E391952C7E0C3900DEAC7D /* CalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +102,14 @@
 		A545EBEE2C613061006BC982 /* TipsCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				A555551F2D314EEE00F591AC /* CustomUIElements */,
+				A55555142D2EE07900F591AC /* Data */,
 				A5E391922C7E059200DEAC7D /* Model */,
 				A545EC062C61325C006BC982 /* Controllers */,
 				A545EC052C61322C006BC982 /* Application */,
-				A545EC042C613224006BC982 /* Cell */,
+				A545EC042C613224006BC982 /* Cells */,
 				A545EC032C61321C006BC982 /* Views */,
-				A545EBF82C613062006BC982 /* Assets.xcassets */,
+				A55555262D3533CD00F591AC /* Assets */,
 				A545EBFA2C613062006BC982 /* LaunchScreen.storyboard */,
 				A545EBFD2C613063006BC982 /* Info.plist */,
 			);
@@ -85,21 +119,20 @@
 		A545EC032C61321C006BC982 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A545EC072C613295006BC982 /* HeadView.swift */,
-				A545EC092C6132CF006BC982 /* TotalBillView.swift */,
-				A545EC0D2C613322006BC982 /* PersonsView.swift */,
-				A545EC0B2C6132E4006BC982 /* TipsView.swift */,
-				A5E391952C7E0C3900DEAC7D /* CalculateButton.swift */,
+				A55555432D36B6F800F591AC /* TipsCalculationVC */,
+				A55555492D36E2ED00F591AC /* TCAlertVC */,
+				A55555442D36B71100F591AC /* TipsInfoVC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A545EC042C613224006BC982 /* Cell */ = {
+		A545EC042C613224006BC982 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				A5115EE62CDBDA7C00C0E3E5 /* TipsViewCollectionCell.swift */,
+				A55555192D303DA100F591AC /* CountryTableViewCell.swift */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A545EC052C61322C006BC982 /* Application */ = {
@@ -115,15 +148,94 @@
 			isa = PBXGroup;
 			children = (
 				A545EBF32C613061006BC982 /* TipsCalculationVC.swift */,
-				A55555122D2DD78600F591AC /* TipsInfoVC.swift */,
+				A55555122D2DD78600F591AC /* CountryListVC.swift */,
+				A55555472D36D70C00F591AC /* TCAlertVC.swift */,
+				A555551B2D30658800F591AC /* TipsInfoVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A55555142D2EE07900F591AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A55555152D2EE17500F591AC /* TipsData.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A555551F2D314EEE00F591AC /* CustomUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				A55555202D314F1100F591AC /* TCLabel.swift */,
+				A55555242D31599400F591AC /* TCButton.swift */,
+				A555554A2D38188D00F591AC /* TCImageView.swift */,
+			);
+			path = CustomUIElements;
+			sourceTree = "<group>";
+		};
+		A55555262D3533CD00F591AC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A55555272D3533DE00F591AC /* Fonts */,
+				A545EBF82C613062006BC982 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A55555272D3533DE00F591AC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A55555282D3533E500F591AC /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A55555282D3533E500F591AC /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				A55555392D353C0D00F591AC /* Roboto-Bold.ttf */,
+				A555553A2D353C0D00F591AC /* Roboto-Light.ttf */,
+				A55555372D353BE200F591AC /* Roboto-Black.ttf */,
+				A555553F2D353C2800F591AC /* Roboto-Regular.ttf */,
+				A555553D2D353C2800F591AC /* Roboto-Medium.ttf */,
+				A555553E2D353C2800F591AC /* Roboto-Thin.ttf */,
+				A55555352D35372000F591AC /* RobotoDynamicType.swift */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		A55555432D36B6F800F591AC /* TipsCalculationVC */ = {
+			isa = PBXGroup;
+			children = (
+				A545EC072C613295006BC982 /* HeadView.swift */,
+				A545EC092C6132CF006BC982 /* TotalBillView.swift */,
+				A545EC0D2C613322006BC982 /* PersonsView.swift */,
+				A545EC0B2C6132E4006BC982 /* TipsViewWithAction.swift */,
+			);
+			path = TipsCalculationVC;
+			sourceTree = "<group>";
+		};
+		A55555442D36B71100F591AC /* TipsInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				A555551D2D314DBF00F591AC /* TipsInfoView.swift */,
+			);
+			path = TipsInfoVC;
+			sourceTree = "<group>";
+		};
+		A55555492D36E2ED00F591AC /* TCAlertVC */ = {
+			isa = PBXGroup;
+			children = (
+				A55555452D36B75700F591AC /* TCAlertView.swift */,
+			);
+			path = TCAlertVC;
 			sourceTree = "<group>";
 		};
 		A5E391922C7E059200DEAC7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A5E391932C7E05D400DEAC7D /* TipsCalculation.swift */,
+				A55555172D30312C00F591AC /* TipsInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,8 +302,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55555402D353C2800F591AC /* Roboto-Medium.ttf in Resources */,
 				A545EBF92C613062006BC982 /* Assets.xcassets in Resources */,
+				A55555412D353C2800F591AC /* Roboto-Thin.ttf in Resources */,
+				A55555422D353C2800F591AC /* Roboto-Regular.ttf in Resources */,
+				A55555382D353BE200F591AC /* Roboto-Black.ttf in Resources */,
 				A545EBFC2C613062006BC982 /* Base in Resources */,
+				A555553B2D353C0E00F591AC /* Roboto-Bold.ttf in Resources */,
+				A55555162D2EE17500F591AC /* TipsData.json in Resources */,
+				A555553C2D353C0E00F591AC /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,16 +321,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A555551E2D314DBF00F591AC /* TipsInfoView.swift in Sources */,
 				A5E391942C7E05D400DEAC7D /* TipsCalculation.swift in Sources */,
-				A545EC0C2C6132E4006BC982 /* TipsView.swift in Sources */,
+				A55555462D36B75700F591AC /* TCAlertView.swift in Sources */,
+				A545EC0C2C6132E4006BC982 /* TipsViewWithAction.swift in Sources */,
+				A555551C2D30658800F591AC /* TipsInfoVC.swift in Sources */,
+				A55555482D36D70C00F591AC /* TCAlertVC.swift in Sources */,
+				A55555252D31599400F591AC /* TCButton.swift in Sources */,
 				A545EBF42C613061006BC982 /* TipsCalculationVC.swift in Sources */,
+				A55555182D30312C00F591AC /* TipsInfoModel.swift in Sources */,
+				A555554B2D38188D00F591AC /* TCImageView.swift in Sources */,
 				A545EC0A2C6132CF006BC982 /* TotalBillView.swift in Sources */,
 				A545EBF02C613061006BC982 /* AppDelegate.swift in Sources */,
 				A545EC082C613295006BC982 /* HeadView.swift in Sources */,
+				A55555362D35372000F591AC /* RobotoDynamicType.swift in Sources */,
 				A545EC0E2C613322006BC982 /* PersonsView.swift in Sources */,
-				A5E391962C7E0C3900DEAC7D /* CalculateButton.swift in Sources */,
+				A55555212D314F1100F591AC /* TCLabel.swift in Sources */,
 				A5115EE72CDBDA7C00C0E3E5 /* TipsViewCollectionCell.swift in Sources */,
-				A55555132D2DD78600F591AC /* TipsInfoVC.swift in Sources */,
+				A55555132D2DD78600F591AC /* CountryListVC.swift in Sources */,
+				A555551A2D303DA100F591AC /* CountryTableViewCell.swift in Sources */,
 				A545EBF22C613061006BC982 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,8 +489,7 @@
 				INFOPLIST_FILE = TipsCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,8 +515,7 @@
 				INFOPLIST_FILE = TipsCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

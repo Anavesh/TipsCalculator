@@ -1,0 +1,80 @@
+[
+  {
+    "name": "USA",
+    "flagImage": "USA",
+    "recommendedTip": "15-20%",
+    "details": "In the USA, a 15-20% tip is customary in restaurants. Some establishments may automatically add a gratuity for larger parties, so it's important to check the bill. Taxis generally receive 10-15%, or you can round up to the nearest dollar. It's appreciated to tip based on service quality, especially for longer rides. For hotels, $1-2 per bag for porters, $3-5 per night for housekeeping, and $10-20 for concierge assistance are common, depending on the service."
+  },
+  {
+    "name": "France",
+    "flagImage": "France",
+    "recommendedTip": "Service included",
+    "details": "In France, the service charge is often included in the bill ('service compris'), but rounding up or leaving small change is appreciated. Exceptional service may warrant an additional tip. Taxis typically receive a tip by rounding up to the nearest euro, or €1-2 for longer trips. For hotels, €1-2 per bag for porters, €1-2 per night for housekeeping, and €5-10 for concierge assistance are typical."
+  },
+  {
+    "name": "Japan",
+    "flagImage": "Japan",
+    "recommendedTip": "No tipping culture",
+    "details": "Japan does not have a tipping culture, and tipping can be seen as an insult in some cases. If you wish to tip, use an envelope to present money discreetly. For taxis, no tip is expected, but a small gift or polite words of appreciation may be appreciated. In hotels, tipping is not common, though small gifts or money in an envelope are thoughtful gestures for exceptional service."
+  },
+  {
+    "name": "Italy",
+    "flagImage": "Italy",
+    "recommendedTip": "Service charge varies",
+    "details": "In Italy, a 'coperto' or service charge is often included. Leaving €1-2 or rounding up is appreciated for good service, and it's still polite to leave extra for exceptional service. Taxis may receive a tip by rounding up the fare or adding €1-2 for excellent service. Hotels typically expect €1-2 per bag for porters, €1-2 per night for housekeeping, and €5-10 for concierge services."
+  },
+  {
+    "name": "Germany",
+    "flagImage": "Germany",
+    "recommendedTip": "5-10%",
+    "details": "In Germany, a 5-10% tip is customary in restaurants, or you can round up to the nearest euro. Tipping is appreciated but not necessary if a service charge is included. For taxis, rounding up or adding 5-10% is common. Hotels expect €1-2 per bag for porters, €1-2 per night for housekeeping, and €5 for concierge services."
+  },
+  {
+    "name": "United Kingdom",
+    "flagImage": "UK",
+    "recommendedTip": "10-15%",
+    "details": "In the United Kingdom, a 10-15% tip is customary in restaurants, though it's important to check if a service charge is included. For taxis, round up or add 10% for excellent service. Hotels typically expect £1-2 per bag for porters, £1-2 per night for housekeeping, and £5-10 for concierge services."
+  },
+  {
+    "name": "Spain",
+    "flagImage": "Spain",
+    "recommendedTip": "5-10%",
+    "details": "In Spain, tipping is not obligatory, but leaving small change or 5-10% for good service is appreciated. In high-end restaurants, a tip of 10% may be more common. Taxis typically receive a small tip by rounding up, or you can leave €1-2 for excellent service. For hotels, €1-2 per bag for porters, €1-2 per night for housekeeping, and €5 for concierge services are typical."
+  },
+  {
+    "name": "Australia",
+    "flagImage": "Australia",
+    "recommendedTip": "10% for exceptional service",
+    "details": "In Australia, tipping is not mandatory, but a 10% tip for exceptional service is appreciated in restaurants. Taxis typically receive a tip by rounding up to the nearest dollar, with an extra tip for exceptional service. For hotels, $1-2 per bag for porters and $1-2 per night for housekeeping is common. For concierge services, it's customary to give a larger tip for special requests."
+  },
+  {
+    "name": "Mexico",
+    "flagImage": "Mexico",
+    "recommendedTip": "10-15%",
+    "details": "In Mexico, a 10-15% tip is customary in restaurants, with a service charge sometimes included. Taxis often receive a tip by rounding up or adding 10-15% for good service. For hotels, $1-2 per bag for porters and $2-5 per night for housekeeping is common. Concierge services may also receive a small gift or tip for their assistance."
+  },
+  {
+    "name": "Brazil",
+    "flagImage": "Brazil",
+    "recommendedTip": "10%",
+    "details": "In Brazil, a 10% tip is customary, though it may be added to the bill as a service charge. If not, leaving 10% is common. Taxis typically receive a tip by rounding up or leaving a larger tip for longer rides. For hotels, R$1-2 per bag for porters and R$2-3 per night for housekeeping is standard."
+  },
+  {
+    "name": "Canada",
+    "flagImage": "Canada",
+    "recommendedTip": "15-20%",
+    "details": "In Canada, a 15-20% tip is customary in restaurants, or you can round up for good service. Taxis typically receive a tip of 10-15%, and for longer rides or better service, you can leave more. Hotels typically expect $1-2 per bag for porters and $3-5 per night for housekeeping. Concierge services are often tipped $5-10 for exceptional service."
+  },
+  {
+    "name": "Greece",
+    "flagImage": "Greece",
+    "recommendedTip": "5-10%",
+    "details": "In Greece, tipping is optional but appreciated. You can leave 5-10% or round up the bill for good service. Taxis usually receive a tip by rounding up the fare, with a larger tip for exceptional service. Hotels expect €1-2 per bag for porters, €1-2 per night for housekeeping, and €5-10 for concierge services."
+  },
+  {
+    "name": "Thailand",
+    "flagImage": "Thailand",
+    "recommendedTip": "No tipping expected",
+    "details": "In Thailand, tipping is not expected but can be appreciated. You can round up the fare in taxis or leave a small tip for exceptional service. For hotels, small tips for porters and housekeeping are appreciated, though it's not expected. In luxury hotels, larger tips for concierge services are more common for special requests."
+  }
+]

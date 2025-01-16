@@ -3,7 +3,10 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        true
+        if #available(iOS 13.0, *) {
+            UIWindow.appearance().overrideUserInterfaceStyle = .light
+        }
+        return true
     }
 
     // MARK: UISceneSession Lifecycle

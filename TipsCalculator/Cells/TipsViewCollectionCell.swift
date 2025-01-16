@@ -1,23 +1,14 @@
 import UIKit
 
 final class TipsViewCollectionCell: UICollectionViewCell {
+    
     // MARK: Variables and Constants
 
     static let identifier = "TipsCell"
 
     // MARK: UI elements
-
-    let tipsAmountLabel: UILabel = {
-        let button = UILabel()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.text = "0"
-        button.textAlignment = .center
-        button.font = UIFont(name: "Avenir Next Bold", size: 24)
-        button.textColor = .black
-        button.minimumScaleFactor = 0.5
-        button.adjustsFontSizeToFitWidth = true
-        return button
-    }()
+    
+    let tipsAmountLabel = TCLabel(text: "0", fontStyle: .title3, alignment: .center)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,7 +25,9 @@ final class TipsViewCollectionCell: UICollectionViewCell {
 
     private func setView() {
         addSubview(tipsAmountLabel)
-        backgroundColor = #colorLiteral(red: 0.4951053858, green: 0.9051901698, blue: 1, alpha: 0.926919495)
+        tipsAmountLabel.translatesAutoresizingMaskIntoConstraints = false
+        tipsAmountLabel.textColor = .white
+        backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.9529411765, alpha: 0.926919495)
         layer.cornerRadius = 10
     }
 
@@ -52,7 +45,7 @@ final class TipsViewCollectionCell: UICollectionViewCell {
     public func configureCell() {
         if isSelected {
             layer.borderWidth = 3
-            layer.borderColor = UIColor.white.cgColor
+            layer.borderColor = #colorLiteral(red: 1, green: 0.1607843137, blue: 0.1607843137, alpha: 1)
         } else {
             layer.borderWidth = 0
             layer.borderColor = nil

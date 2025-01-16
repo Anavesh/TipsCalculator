@@ -12,7 +12,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = createTabBar()
         window?.makeKeyAndVisible()
-        configureNavigationBar()
     }
     func createTipsCalculationNC() -> UINavigationController {
         let tipsCalculationNC = TipsCalculationVC()
@@ -22,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func createTipsInfoNC() -> UINavigationController {
-        let tipsInfoNC = TipsInfoVC()
+        let tipsInfoNC = CountryListVC()
         tipsInfoNC.title?.removeAll()
         tipsInfoNC.tabBarItem = UITabBarItem(title: "Tips culture", image: UIImage(systemName: "info.circle"), tag: 1)
         return UINavigationController(rootViewController:tipsInfoNC)
@@ -30,15 +29,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
-        UITabBar.appearance().backgroundColor = #colorLiteral(red: 0.5972653031, green: 0.9011378884, blue: 1, alpha: 1)
-        UITabBar.appearance().tintColor = #colorLiteral(red: 0, green: 0.4142764509, blue: 0.8548873067, alpha: 1)
-        UITabBar.appearance().unselectedItemTintColor = #colorLiteral(red: 0.6922743917, green: 0.692825377, blue: 0.7096441984, alpha: 1)
+        UITabBar.appearance().backgroundColor = #colorLiteral(red: 0.9215686275, green: 0.9176470588, blue: 1, alpha: 1)
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.9215686275, green: 0.9176470588, blue: 1, alpha: 1)
+        UITabBar.appearance().tintColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.9529411765, alpha: 1)
+        UITabBar.appearance().unselectedItemTintColor = #colorLiteral(red: 1, green: 0.1607843137, blue: 0.1607843137, alpha: 1)
         tabBar.viewControllers = [createTipsCalculationNC(),createTipsInfoNC()]
         return tabBar
-    }
-    
-    func configureNavigationBar() {
-        UINavigationBar.appearance().tintColor = .systemGreen
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
