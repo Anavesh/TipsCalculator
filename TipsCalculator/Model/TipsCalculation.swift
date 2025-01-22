@@ -1,18 +1,40 @@
 import Foundation
 
-struct TipsCalculationModel {
+
+protocol TipsCalculationModelDelegate: AnyObject {
+    func didFinishCalculating(_ result: String)
+}
+
+final class TipsCalculationModel {
     
-    let tipsArray = ["5%", "10%", "15%", "20%"]
-    var bill: Double = 0
-    var tips: Double = 0
-    var personCount: Double = 0
+    private let tipsArray = ["5%", "10%", "15%", "20%"]
+    private var bill: Double = 0
+    private var tips: Double = 0
+    private var personCount: Double = 1
+    
+    weak var delegate: TipsCalculationModelDelegate?
+    
+    func updateBill(with bill: Double) {
+        self.bill = bill
+    }
+    
+    func updateTips(with tips: Double) {
+        self.tips = tips
+    }
+    
+    func updatePersonCount(with count: Double) {
+        self.personCount = count
+    }
+    
+    func getTipsArray() -> [String] {
+        return tipsArray
+    }
     
     func calculateTips() -> String {
-        guard personCount > 0 else {
-            return "Invalid number of persons"
-        }
         let result = (bill * tips) / 100 / personCount
-        return formatNumberWithThousandSeparator(result)
+        let formattedResult = formatNumberWithThousandSeparator(result)
+        self.delegate?.didFinishCalculating(formattedResult)
+        return formattedResult
     }
     
     private func formatNumberWithThousandSeparator(_ number: Double) -> String {

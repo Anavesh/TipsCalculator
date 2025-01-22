@@ -47,7 +47,7 @@ final class HeadView: UIView {
             descriptionLabel.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: isLargeDevice ? 24 : 16),
             descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: isLargeDevice ? 32 : 16),
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: isLargeDevice ? -32 : -16),
-            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: isLargeDevice ? -32 : -16)
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: isLargeDevice ? -32 : -4)
         ])
     }
 }
